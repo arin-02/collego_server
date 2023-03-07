@@ -4,6 +4,11 @@ const SendToken = require("../utils/SendToken");
 const cloudinary = require("cloudinary");
 const fs = require("fs");
 
+const test=(req,res)=>{
+  res.json({
+    success: true,message:"done"
+  });
+}
 const registeringauth = async (req, res) => {
   try {
     const { name, email, password } = req.body;
@@ -313,6 +318,7 @@ const resetPasswordAuth = async (req, res) => {
   }
 };
 module.exports = {
+  test,
   registeringauth,
   verification,
   loginauth,

@@ -13,10 +13,12 @@ const {
   updateProfileAuth,
   updatePasswordAuth,
   forgetPasswordAuth,
-  resetPasswordAuth
+  resetPasswordAuth,
+  test
 } = require("../controller/Usercontroller");
 const { isAuthenticated } = require("../middlewares/Middleware");
 
+router.post("/",test);
 router.post("/register", registeringauth);
 router.post("/verify", isAuthenticated, verification);
 router.post("/login", loginauth);
