@@ -18,7 +18,7 @@ const {
 } = require("../controller/Usercontroller");
 const { isAuthenticated } = require("../middlewares/Middleware");
 
-router.post("/",test);
+router.get("/",test);
 router.post("/register", registeringauth);
 router.post("/verify", isAuthenticated, verification);
 router.post("/login", loginauth);

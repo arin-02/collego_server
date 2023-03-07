@@ -5,9 +5,8 @@ const cloudinary = require("cloudinary");
 const fs = require("fs");
 
 const test=(req,res)=>{
-  res.json({
-    success: true,message:"done"
-  });
+  console.log("Testing")
+  res.send("okkkk")
 }
 const registeringauth = async (req, res) => {
   try {
