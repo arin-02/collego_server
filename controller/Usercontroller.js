@@ -216,7 +216,9 @@ const updateProfileAuth = async (req, res) => {
     if (avatar) {
       console.log("Uploading avatar=============",user.avatar);
        await cloudinary.v2.uploader.destroy(user.avatar.public_id);
-      const mycloud = await cloudinary.v2.uploader.upload(avatar);
+      const mycloud = await cloudinary.v2.uploader.upload(avatar, {
+        folder: "CollegoAPP",
+      });
 
       fs.rmSync("./tmp", { recursive: true });
       user.avatar = {
