@@ -220,7 +220,7 @@ const updateProfileAuth = async (req, res) => {
 
       fs.rmSync("./tmp", { recursive: true });
       user.avatar = {
-        publid_id: mycloud.public_id,
+        public_id: mycloud.public_id,
         url: mycloud.secure_url,
       };
       console.log("closing avatar=============")
